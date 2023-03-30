@@ -9,8 +9,10 @@ function App() {
   const [loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN")
   const [user, setUser] = useState({})
 
+  axios.defaults.baseURL = "http://localhost:3000/"
+
   function checkLoginStatus() {
-    axios.get("http://localhost:3000/logged_in",
+    axios.get("/logged_in",
       { withCredentials: true }
     )
       .then(response => {

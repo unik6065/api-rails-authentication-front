@@ -13,7 +13,7 @@ function Home({ loggedInStatus, handleLogin, handleLogout }) {
   }
 
   function handleLogoutClick() {
-    axios.delete("http://localhost:3000/logout",
+    axios.delete("/logout",
       { withCredentials: true })
       .then(() => {
         handleLogout();

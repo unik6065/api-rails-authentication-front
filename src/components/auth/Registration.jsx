@@ -16,7 +16,7 @@ function Registration({ handleSuccessfulAuth }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    axios.post("http://localhost:3000/registration", {
+    axios.post("/registration", {
       user: {
         email: user.email,
         password: user.password,
