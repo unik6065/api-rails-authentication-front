@@ -10,6 +10,10 @@ function App() {
   const [user, setUser] = useState({})
 
   axios.defaults.baseURL = "http://localhost:3000/"
+  axios.defaults.xsrfCookieName = "CSRF-TOKEN";
+  axios.defaults.xsrfHeaderName = "X-CSRF-Token";
+  axios.defaults.withCredentials = true;
+
 
   function checkLoginStatus() {
     axios.get("/logged_in",
